@@ -23,6 +23,7 @@ fetch('https://dog.ceo/api/breeds/list/all')
 .then(data => {
     const dogBreeds = data['message']
     //console.log(dogBreeds)
+    breedFilter.addEventListener('change', handleBreedFilter)
 
     for(const breed in dogBreeds){
         //console.log(dogBreeds[breed])
@@ -45,7 +46,7 @@ fetch('https://dog.ceo/api/breeds/list/all')
     }
 })
 
-breedFilter.addEventListener('change', handleBreedFilter)
+
 //console.log(document.querySelector(`ul`))
 
 
